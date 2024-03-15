@@ -8,6 +8,8 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "format-check": "prettier --check \"./**/*.{css,scss,json,md,js,ts,tsx,jsx}\"",
+    "format-check-fix": "prettier --write \"./**/*.{css,scss,json,md,js,ts,tsx,jsx}\"",
     "prepare": "husky",
     "postinstall": "husky"
   },
