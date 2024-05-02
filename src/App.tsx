@@ -8,7 +8,7 @@ import { Page } from "./components";
 function App() {
   const [count, setCount] = useState(0);
   const { appData } = useAppState();
-  
+
   appData.test = "new message from App()";
 
   return (

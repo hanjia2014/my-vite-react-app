@@ -8,4 +8,4 @@ export const useAppState = (): IAppState => {
   }
 
   return context;
-}
+};
