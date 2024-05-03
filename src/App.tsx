@@ -7,7 +7,7 @@ import { Page } from "./components";
 
 function App() {
   const [count, setCount] = useState(0);
-  const { appData } = useAppState();
+  const { appData, liveData } = useAppState();
 
   appData.test = "new message from App()";
 
@@ -33,6 +33,11 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+
+      <div>
+        <span>Live Data:</span>
+        <p>{liveData.value}</p>
+      </div>
 
       <Page />
     </>

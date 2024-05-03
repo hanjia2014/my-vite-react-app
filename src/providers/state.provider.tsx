@@ -1,3 +1,4 @@
+import { Signal, signal } from "@preact/signals-core";
 import { createContext } from "react";
 
 export interface Props {
@@ -8,6 +9,7 @@ export interface IAppState {
   username: string | null;
   appData: Record<string, unknown>;
   error: Record<string, unknown>;
+  liveData: Signal<string>;
 }
 
 const initialAppState: IAppState = {
@@ -15,6 +17,7 @@ const initialAppState: IAppState = {
   appData: {
     test: "This is the test",
   },
+  liveData: signal("initial live data"),
   error: {
     message: "no error",
   },
