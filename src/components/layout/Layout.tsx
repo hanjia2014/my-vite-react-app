@@ -1,6 +1,6 @@
-import { ReactElement } from "react"
-import { BaseElementProps } from "../../models"
+import { ReactElement } from "react";
+import { BaseElementProps } from "../../models";
 
 export const Layout = ({ children }: BaseElementProps): ReactElement => {
-  return <div>{ children }</div>
-}
+  return <div>{children}</div>;
+};

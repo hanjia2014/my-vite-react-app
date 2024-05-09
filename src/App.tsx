@@ -18,8 +18,7 @@ function App() {
               <Home />
             </Suspense>
           }
-        >
-        </Route>
+        ></Route>
         <Route
           path="/State-Todo-Example"
           element={
@@ -27,8 +26,7 @@ function App() {
               <StateTodoListComponent />
             </Suspense>
           }
-        >
-        </Route>
+        ></Route>
         <Route
           path="/Signal-Todo-Example"
           element={
@@ -36,8 +34,7 @@ function App() {
               <SignalTodoListComponent />
             </Suspense>
           }
-        >
-        </Route>
+        ></Route>
       </Routes>
     </Layout>
   );
