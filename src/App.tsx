@@ -1,51 +1,45 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import { useAppState } from "./hooks/useAppState";
-import { Page } from "./components";
-import StateTodoListComponent from "./components/todo/todoState/todoState";
+import { Layout } from "./components/layout/Layout";
+import { Route, Routes } from "react-router-dom";
+import { Suspense } from "react";
+import { Loader } from "./components/layout/Loader";
+import { Home } from "./components/layout";
 import SignalTodoListComponent from "./components/todo/todoSignal/todoSignal";
+import StateTodoListComponent from "./components/todo/todoState/todoState";
 
 function App() {
-  const [count, setCount] = useState(0);
-  const { appData, liveData } = useAppState();
-
-  appData.test = "new message from App()";
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-
-      <div>
-        <span>Live Data:</span>
-        <p>{liveData.value}</p>
-      </div>
-
-      <Page />
-
-      <StateTodoListComponent />
-      <SignalTodoListComponent />
-    </>
+    <Layout>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Suspense fallback={<Loader />}>
+              <Home />
+            </Suspense>
+          }
+        >
+        </Route>
+        <Route
+          path="/State-Todo-Example"
+          element={
+            <Suspense fallback={<Loader />}>
+              <StateTodoListComponent />
+            </Suspense>
+          }
+        >
+        </Route>
+        <Route
+          path="/Signal-Todo-Example"
+          element={
+            <Suspense fallback={<Loader />}>
+              <SignalTodoListComponent />
+            </Suspense>
+          }
+        >
+        </Route>
+      </Routes>
+    </Layout>
   );
 }
 
