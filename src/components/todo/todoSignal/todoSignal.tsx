@@ -1,3 +1,5 @@
+// example from:  https://www.skcript.com/blog/react-signals/
+
 import React from "react";
 
 import { Signal, useSignal } from "@preact/signals-react";
