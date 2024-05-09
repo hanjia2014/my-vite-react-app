@@ -4,6 +4,8 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import { useAppState } from "./hooks/useAppState";
 import { Page } from "./components";
+import StateTodoListComponent from "./components/todo/todoState/todoState";
+import SignalTodoListComponent from "./components/todo/todoSignal/todoSignal";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -40,6 +42,9 @@ function App() {
       </div>
 
       <Page />
+
+      <StateTodoListComponent />
+      <SignalTodoListComponent />
     </>
   );
 }
