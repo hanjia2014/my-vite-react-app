@@ -37,7 +37,7 @@ export default function StateTodoListComponent() {
         type="text"
         onKeyDown={(event) => {
           const title = (event.target as HTMLInputElement).value;
-          if (event.key === "Enter" && (title ?? '').length > 0) {
+          if (event.key === "Enter" && (title ?? "").length > 0) {
             setTodos([
               ...todos,
               {
