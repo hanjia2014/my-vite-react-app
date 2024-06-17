@@ -3,7 +3,7 @@ import { useAppState } from "../hooks/useAppState";
 
 export const Page = () => {
   const { appData, liveData } = useAppState();
-  const [ , setFlag ] = useState(Date.now().toString());
+  const [, setFlag] = useState(Date.now().toString());
 
   console.log("live data", liveData);
 
