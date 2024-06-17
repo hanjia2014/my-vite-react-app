@@ -11,7 +11,7 @@ export const Page = () => {
 
   const onChangeHandler = (val: unknown) => {
     console.log(val, "val");
-  }
+  };
 
   return (
     <>
