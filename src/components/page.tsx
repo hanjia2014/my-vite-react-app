@@ -1,18 +1,19 @@
+import { useState } from "react";
 import { useAppState } from "../hooks/useAppState";
 
 export const Page = () => {
   const { appData, liveData } = useAppState();
-
-  const message: string = appData.test?.toString() ?? "";
+  const [ , setFlag ] = useState(Date.now().toString());
 
   console.log("live data", liveData);
 
   return (
     <>
-      <span>{message}</span>
+      <span>{appData.test?.toString()}</span>
       <button
         onClick={() => {
-          liveData.value = "live data updated";
+          appData.test = "live data updated";
+          setFlag(Date.now().toString());
         }}
       >
         Click
