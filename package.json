@@ -13,6 +13,8 @@
     "format-check-fix": "prettier --write \"./**/*.{css,scss,json,md,js,ts,tsx,jsx}\"",
     "scss-lint": "stylelint \"./**/*.{css,scss}\"",
     "scss-lint-fix": "stylelint \"./**/*.{css,scss}\" --fix",
+    "test": "vitest run",
+    "test-watch": "vitest",
     "prepare": "husky install",
     "postinstall": "husky install"
   },
