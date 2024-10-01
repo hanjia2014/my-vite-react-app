@@ -11,16 +11,24 @@
     "preview": "vite preview",
     "format-check": "prettier --check \"./**/*.{css,scss,json,md,js,ts,tsx,jsx}\"",
     "format-check-fix": "prettier --write \"./**/*.{css,scss,json,md,js,ts,tsx,jsx}\"",
+    "scss-lint": "stylelint \"./**/*.{css,scss}\"",
+    "scss-lint-fix": "stylelint \"./**/*.{css,scss}\" --fix",
     "prepare": "husky install",
     "postinstall": "husky install"
   },
   "dependencies": {
     "@preact/signals": "^1.2.3",
     "@preact/signals-react": "^2.0.1",
+    "primeflex": "^3.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.0",
-    "react-select": "^5.8.0"
+    "react-select": "^5.8.0",
+    "sass": "^1.79.4",
+    "stylelint": "^16.9.0",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-recommended-scss": "^14.1.0",
+    "stylelint-scss": "^6.7.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.64",
