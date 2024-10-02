@@ -1,0 +1,44 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  overflow: hidden;
+  height: 100%;
+}
+
+.yn-page-header {
+  background-color: #0095ce25;
+  height: 43px;
+  min-height: 43px;
+  padding: 7px 16px;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+#content {
+  background-color: green;
+  padding: 1em;
+  overflow: hidden;
+}
+
+#left {
+  overflow: scroll;
+  background-color: blue;
+}
+
+#middle {
+  background-color: yellow;
+}
+
+#right {
+  background-color: red;
+}
+
+.colHeader {
+  background-color: black;
+  color: white;
+}
+
+.colContent {
+  background-color: white;
+  overflow: scroll;
+}

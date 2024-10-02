@@ -6,6 +6,7 @@ import { Loader } from "./components/layout/Loader";
 import { Home } from "./components/layout";
 import SignalTodoListComponent from "./components/todo/todoSignal/todoSignal";
 import StateTodoListComponent from "./components/todo/todoState/todoState";
+import Grid from "./components/grid/grid";
 
 function App() {
   return (
@@ -32,6 +33,14 @@ function App() {
           element={
             <Suspense fallback={<Loader />}>
               <SignalTodoListComponent />
+            </Suspense>
+          }
+        ></Route>
+        <Route
+          path="/grid"
+          element={
+            <Suspense fallback={<Loader />}>
+              <Grid />
             </Suspense>
           }
         ></Route>
