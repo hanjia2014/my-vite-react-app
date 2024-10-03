@@ -15,8 +15,9 @@ export const Page = () => {
 
   return (
     <>
-      <span>{appData.test?.toString()}</span>
+      <span data-testid="span-test">{appData.test?.toString()}</span>
       <button
+        data-testid="btn-live-data"
         onClick={() => {
           appData.test = "live data updated";
           setFlag(Date.now().toString());
